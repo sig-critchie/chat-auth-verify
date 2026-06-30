@@ -1,0 +1,13 @@
+{
+  "name": "chat-auth-verify-action",
+  "version": "1.0.0",
+  "description": "Verifies an HMAC-SHA256 signed customerRef + generationTime payload for Genesys Cloud chat sessions",
+  "type": "commonjs",
+  "scripts": {
+    "zip": "zip -r function-chat-auth-verify-action.zip src/",
+    "localtest1": "node ../test/test_function_js.mjs ../test/data.json ../test/context.json",
+    "slspackage": "sls package",
+    "slslocaltest1": "sls invoke local --function echo --path ../test/data.json --contextPath ../test/context.json"
+  },
+  "dependencies": {}
+}
